@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Auto Insurance Finder</title>
+  <meta name="description" content="Compare Texas car insurance prices and ratings, get official quotes, track your own quotes, and find ways to save.">
+  <meta name="theme-color" content="#1e5bd8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Auto Insurance">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.png" type="image/png">
+  <link rel="icon" href="icon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script>try{var t=localStorage.getItem('aif-theme');if(t)document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark';}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <a class="brand" href="#/compare" aria-label="Auto Insurance Finder home">
+      <img src="icons/icon-192.png" alt="" width="42" height="42">
+      <span><b>Auto Insurance Finder</b><small>Frisco, TX 75034 · information only</small></span>
+    </a>
+    <div class="top-actions">
+      <span id="netPill" class="pill" role="status">Checking…</span>
+      <button type="button" id="themeBtn" class="icon-btn" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <nav class="tabs" aria-label="Main sections">
+    <button type="button" data-go="compare"><span aria-hidden="true">📊</span>Compare</button>
+    <button type="button" data-go="estimate"><span aria-hidden="true">🎚️</span>Estimate</button>
+    <button type="button" data-go="quotes"><span aria-hidden="true">🔗</span>Get quotes</button>
+    <button type="button" data-go="mine"><span aria-hidden="true">📝</span>My quotes</button>
+    <button type="button" data-go="delivery"><span aria-hidden="true">🛵</span>Delivery</button>
+    <button type="button" data-go="save"><span aria-hidden="true">💰</span>Save</button>
+    <button type="button" data-go="learn"><span aria-hidden="true">📘</span>Learn</button>
+  </nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

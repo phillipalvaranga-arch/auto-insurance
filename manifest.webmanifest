@@ -1,0 +1,16 @@
+{
+  "name": "Auto Insurance Finder",
+  "short_name": "Auto Insurance",
+  "description": "Compare Texas car insurance prices and ratings, get official quotes, track your own quotes, and find ways to save. Information only.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a2a6b",
+  "theme_color": "#1e5bd8",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

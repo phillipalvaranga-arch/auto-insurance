@@ -1,0 +1,95 @@
+{
+ "checked": "2026-11-13T12:13:24Z",
+ "sites": {
+  "statefarm": {
+   "code": 200,
+   "state": "up"
+  },
+  "geico": {
+   "code": 200,
+   "state": "up"
+  },
+  "progressive": {
+   "code": 200,
+   "state": "up"
+  },
+  "allstate": {
+   "code": 200,
+   "state": "up"
+  },
+  "usaa": {
+   "code": 200,
+   "state": "up"
+  },
+  "farmers": {
+   "code": 0,
+   "state": "unknown"
+  },
+  "nationwide": {
+   "code": 200,
+   "state": "up"
+  },
+  "txfb": {
+   "code": 200,
+   "state": "up"
+  },
+  "aaa": {
+   "code": 200,
+   "state": "up"
+  },
+  "germania": {
+   "code": 202,
+   "state": "up"
+  },
+  "mercury": {
+   "code": 200,
+   "state": "up"
+  },
+  "travelers": {
+   "code": 200,
+   "state": "up"
+  },
+  "liberty": {
+   "code": 200,
+   "state": "up"
+  },
+  "root": {
+   "code": 200,
+   "state": "up"
+  },
+  "clearcover": {
+   "code": 200,
+   "state": "up"
+  }
+ },
+ "sources": {
+  "mg": {
+   "code": 200,
+   "state": "up",
+   "pageUpdated": "2026-11-06",
+   "inApp": "2026-11-06",
+   "newer": false
+  },
+  "nw": {
+   "code": 200,
+   "state": "up",
+   "pageUpdated": "2026-11-02",
+   "inApp": "2026-11-02",
+   "newer": false
+  },
+  "icom": {
+   "code": 200,
+   "state": "up",
+   "pageUpdated": "2026-01-06",
+   "inApp": "2026-01-06",
+   "newer": false
+  },
+  "jdp": {
+   "code": 200,
+   "state": "up",
+   "pageUpdated": "2026-06-23",
+   "inApp": "2026-06-23",
+   "newer": false
+  }
+ }
+}

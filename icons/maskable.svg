@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e5bd8"/>
+      <stop offset="1" stop-color="#0a2a6b"/>
+    </linearGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd25a"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+  <clipPath id="r"><rect width="512" height="512" rx="112"/></clipPath></defs><rect width="512" height="512" fill="url(#bg)"/><path d="M0 400 Q256 350 512 400 L512 512 L0 512 Z" fill="#082052" opacity="0.55"/><g transform="translate(51.2,51.2) scale(0.8)">
+  <circle cx="256" cy="230" r="170" fill="#ffffff" opacity="0.07"/>
+  <!-- road -->
+  
+  <!-- car body -->
+  <g transform="translate(0,18)">
+    <path d="M118 300 L150 228 Q160 206 186 204 L316 204 Q340 206 354 226 L392 280 Q430 286 438 312 L442 350 Q442 366 426 366 L94 366 Q78 366 78 350 L80 326 Q84 304 118 300 Z" fill="url(#car)"/>
+    <path d="M166 290 L188 236 Q193 226 206 226 L250 226 L250 290 Z" fill="#cfe4ff"/>
+    <path d="M272 226 L312 226 Q324 226 332 238 L364 290 L272 290 Z" fill="#cfe4ff"/>
+    <rect x="96" y="314" width="34" height="14" rx="7" fill="#fff7d6"/>
+    <rect x="402" y="314" width="30" height="14" rx="7" fill="#ff6b5a"/>
+    <circle cx="170" cy="366" r="40" fill="#0b1b3f"/>
+    <circle cx="170" cy="366" r="18" fill="#c7d2e6"/>
+    <circle cx="358" cy="366" r="40" fill="#0b1b3f"/>
+    <circle cx="358" cy="366" r="18" fill="#c7d2e6"/>
+  </g>
+  <!-- shield with check -->
+  <g transform="translate(316,64)">
+    <path d="M80 0 L150 26 L150 82 Q150 140 80 170 Q10 140 10 82 L10 26 Z" fill="url(#shield)" stroke="#ffffff" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M46 86 L72 112 L118 62" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- dollar tag -->
+  <g transform="translate(60,70)">
+    <circle cx="62" cy="62" r="56" fill="#ffffff"/>
+    <text x="62" y="86" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="72" fill="#1e5bd8">$</text>
+  </g>
+
+</g></svg>
