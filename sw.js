@@ -1,4 +1,4 @@
-const C = 'autoins-v1';
+const C = 'autoins-v2';
 const F = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'data/insurers.json', 'data/status.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/apple-touch-icon.png', 'icons/favicon.png', 'icon.ico'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(C).then((c) => c.addAll(F))); self.skipWaiting(); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((k) => Promise.all(k.filter((x) => x !== C).map((x) => caches.delete(x)))).then(() => self.clients.claim())); });

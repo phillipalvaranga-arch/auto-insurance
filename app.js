@@ -18,6 +18,31 @@ const S = Object.assign({ ds: 'mg65', cov: 'full', sort: 'cheap', fDel: false, f
 function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 2600); }
 function initials(n) { return n.replace(/\(.*?\)/g, '').split(/\s+/).filter(Boolean).map((w) => w[0]).join('').slice(0, 2).toUpperCase(); }
 function ext(url, label, cls = 'btn') { return `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`; }
+function phoneHref(p) { return 'tel:+1' + String(p).replace(/\D/g, '').replace(/^1/, ''); }
+function phoneTxt(p) { const d = String(p).replace(/\D/g, '').replace(/^1/, ''); return d.length === 10 ? d.slice(0, 3) + '-' + d.slice(3, 6) + '-' + d.slice(6) : String(p); }
+function telBtn(p, label, cls = 'btn ghost') { if (!p) return ''; return `<a class="${cls}" href="${phoneHref(p)}">📞 ${esc(label || phoneTxt(p))}</a>`; }
+function groupLists(groups) {
+  if (!groups || !groups.length) return '';
+  return groups.map((g) => `<p class="small"><b>${esc(g.label)}</b></p><ul class="detail-list">${(g.items || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>${g.src ? `<p class="small muted">Source: ${srcLink(g.src)}</p>` : ''}`).join('');
+}
+function extraDetails(i) {
+  const parts = [];
+  if (i.texasNote) parts.push(`<p class="small"><b>Texas availability:</b> ${esc(i.texasNote)}</p>`);
+  const calls = [];
+  if (i.phone) calls.push(`Quote: <a href="${phoneHref(i.phone)}">${esc(phoneTxt(i.phone))}</a>`);
+  if (i.customerPhone) calls.push(`Customer care: <a href="${phoneHref(i.customerPhone)}">${esc(phoneTxt(i.customerPhone))}</a>`);
+  if (i.claims && i.claims.phone) {
+    let c = `Claims${i.claims.hours ? ' (' + esc(i.claims.hours) + ')' : ''}: <a href="${phoneHref(i.claims.phone)}">${esc(phoneTxt(i.claims.phone))}</a>`;
+    if (i.claims.spanish) c += ` · Spanish: <a href="${phoneHref(i.claims.spanish)}">${esc(phoneTxt(i.claims.spanish))}</a>`;
+    if (i.claims.url) c += ' · ' + `<a href="${esc(i.claims.url)}" target="_blank" rel="noopener noreferrer">File or track a claim</a>`;
+    calls.push(c);
+  }
+  if (calls.length) parts.push(`<p class="small"><b>Call:</b><br>${calls.join('<br>')}</p>`);
+  if (i.discountGroups) parts.push(groupLists(i.discountGroups));
+  if (i.coverageGroups) parts.push(groupLists(i.coverageGroups));
+  if (i.affiliatesNote) parts.push(`<p class="small"><b>Related companies:</b> ${esc(i.affiliatesNote)}${i.affiliatesSrc ? ' Source: ' + srcLink(i.affiliatesSrc) : ''}</p>`);
+  return parts.join('');
+}
 function srcLink(key) { const s = DATA.sources[key]; if (!s) return ''; return `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>${s.updated ? ' (' + fmtDate(s.updated) + ')' : ''}`; }
 function countUp(el, to, prefix = '$') {
   if (reduced || to == null) { el.textContent = to == null ? 'n/a' : prefix + Math.round(to).toLocaleString(); return; }
@@ -161,14 +186,15 @@ function card(i, n) {
       <span class="chev" aria-hidden="true">▾</span>
     </button>
     <div class="badges">${rankBadge}${jd}<span class="badge">AM Best ${esc(i.amBest || 'n/a')}</span><span class="badge ${i.naic == null ? '' : i.naic < 1 ? 'ok' : 'warn'}">Complaints ${i.naic == null ? 'n/a' : i.naic.toFixed(2)}</span><span class="badge ${delCls[del.level]}">🛵 ${delText[del.level]}</span>${vs != null && S.sort === 'value' ? `<span class="badge">Value ${vs}</span>` : ''}</div>
-    <div class="ins-actions">${ext(i.quote, '🧾 Get a quote')}${ext(i.site, '🌐 Visit website', 'btn ghost')}</div>
+    <div class="ins-actions">${ext(i.quote, '🧾 Get a quote')}${telBtn(i.phone, 'Call ' + phoneTxt(i.phone))}${ext(i.site, '🌐 Visit website', 'btn ghost')}</div>
     <div class="more" id="more-${i.id}"><div><div class="more-in">
       <table><thead><tr><th>Price data</th><th>Full</th><th>Minimum</th></tr></thead><tbody>${rows}</tbody></table>
       ${i.rateNote ? `<p class="small muted">${esc(i.rateNote)}</p>` : ''}
       <p class="small"><b>J.D. Power 2026 Texas satisfaction:</b> ${i.jdp == null ? 'n/a (not in the Texas ranking)' : i.jdp + ' of 1,000 (Texas average ' + DATA.jdpTexasAvg + ')' + (i.jdpNote ? ', ' + esc(i.jdpNote) : '')}<br>
       <b>J.D. Power 2026 claims (national):</b> ${i.jdc ? '#' + i.jdc.rank + ' of ' + i.jdc.of + (i.jdc.score ? ', ' + i.jdc.score + ' of 1,000' : '') + ' (average ' + DATA.jdcAvg + ')' : 'n/a'}<br>
       <b>AM Best financial strength:</b> ${esc(i.amBest || 'n/a')} · <b>NAIC complaint index:</b> ${i.naic == null ? 'n/a' : i.naic.toFixed(2)}<br>
-      <b>Driving-tracking discount program:</b> ${esc(i.telematics || 'n/a')}</p>
+      <b>Driving-tracking discount program:</b> ${esc(i.telematics || 'n/a')}${i.telematicsNote ? '<br>' + esc(i.telematicsNote) : ''}${i.telematicsSrc ? ' Source: ' + srcLink(i.telematicsSrc) : ''}</p>
+      ${extraDetails(i)}
       <p class="small"><b class="lvl-${del.level}">🛵 Delivery driving:</b> ${esc(del.text)} ${del.srcs.map((s) => 'Source: ' + srcLink(s)).join(' · ')}${del.link ? ' · ' + `<a href="${esc(del.link)}" target="_blank" rel="noopener noreferrer">Company page</a>` : ''}</p>
       <p class="small muted">${esc(stateText[st.state] || '')}${st.t ? ' · last checked ' + esc(fmtDT(st.t)) : ''}</p>
     </div></div></div>
@@ -240,7 +266,7 @@ function viewQuotes(el) {
   </div>
   <div class="card"><h2 style="margin-top:0">Have this ready</h2><ul><li>Your car's year, make and model, and how many miles you drive a year</li><li>Your current policy's coverage page (to compare the same limits)</li><li>Tell them you deliver for DoorDash/Apex Elite Courier and ask for delivery or business-use coverage</li></ul>
     <div class="note small">🔒 This app never asks for your Social Security number, driver's license number, full VIN, bank or card numbers, or passwords. If a company needs those, type them only on that company's official site.</div></div>
-  <h2>Official quote pages</h2><div class="list">${DATA.insurers.map((i, n) => `<div class="card ins" style="margin:0;animation-delay:${n * 40}ms;padding:0"><div class="ins-head" style="cursor:default"><span class="logo" style="background:${i.color}">${esc(initials(i.name))}<span class="dot ${siteState(i.id).state}"></span></span><span class="ins-name"><b>${esc(i.name)}</b><small>${esc(i.openTo)}</small></span></div><div class="ins-actions">${ext(i.quote, '🧾 Get a quote')}${ext(i.site, '🌐 Website', 'btn ghost')}</div></div>`).join('')}</div>`;
+  <h2>Official quote pages</h2><div class="list">${DATA.insurers.map((i, n) => `<div class="card ins" style="margin:0;animation-delay:${n * 40}ms;padding:0"><div class="ins-head" style="cursor:default"><span class="logo" style="background:${i.color}">${esc(initials(i.name))}<span class="dot ${siteState(i.id).state}"></span></span><span class="ins-name"><b>${esc(i.name)}</b><small>${esc(i.openTo)}</small></span></div><div class="ins-actions">${ext(i.quote, '🧾 Get a quote')}${telBtn(i.phone, 'Call ' + phoneTxt(i.phone))}${ext(i.site, '🌐 Website', 'btn ghost')}</div></div>`).join('')}</div>`;
 }
 
 /* ---------- My quotes ---------- */
@@ -301,7 +327,7 @@ function viewDelivery(el) {
 const TIPS = [
   ['shop', 'Compare 3 or more quotes every renewal', 'Prices for the same driver differ by hundreds of dollars a year between companies. Use HelpInsure.com and the Compare tab.'],
   ['bundle', 'Bundle car with home or renters insurance', 'Most big companies give a multi-policy discount.'],
-  ['telem', 'Try a safe-driving app (telematics)', 'Examples: State Farm Drive Safe & Save, Progressive Snapshot, GEICO DriveEasy, Allstate Drivewise, Nationwide SmartRide. Ask if it can raise your price; some can.'],
+  ['telem', 'Try a safe-driving app (telematics)', 'Examples: State Farm Drive Safe & Save, Progressive Snapshot, GEICO DriveEasy, Allstate Drivewise, Nationwide SmartRide, Farmers Signal. Ask if it can raise your price; some can.'],
   ['ddc', 'Take a Texas defensive driving course', 'The Texas Department of Insurance says companies often give a discount for it. Each company sets its own terms, so ask first.'],
   ['mature', 'Ask about a mature-driver discount', 'Some companies give one to drivers over a set age, often after a driving course. Ask each company.'],
   ['pif', 'Pay in full, use autopay and paperless', 'Many companies charge less when you pay the whole term up front or sign up for autopay or paperless bills.'],

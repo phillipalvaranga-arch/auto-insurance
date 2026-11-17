@@ -1,109 +1,772 @@
 {
-  "dataReviewed": "2026-11-13",
+  "dataReviewed": "2026-11-17",
   "sources": {
-    "mg": {"name": "MoneyGeek", "title": "Cheapest Car Insurance in Texas", "url": "https://www.moneygeek.com/insurance/auto/cheapest-car-insurance-texas/", "updated": "2026-11-06"},
-    "nw": {"name": "NerdWallet", "title": "The Cheapest Car Insurance in Texas for November 2026", "url": "https://www.nerdwallet.com/insurance/auto/cheap-car-insurance-texas", "updated": "2026-11-02"},
-    "icom": {"name": "Insurance.com", "title": "Best cheap car insurance in Texas", "url": "https://www.insurance.com/auto-insurance/cheapest-car-insurance-in-texas", "updated": "2026-01-06"},
-    "jdp": {"name": "J.D. Power 2026 U.S. Auto Insurance Study (Texas region), as reported by Insurance.com", "url": "https://www.insurance.com/auto-insurance/jd-powers-best-and-worst-car-insurance-companies-for-customer-satisfaction/", "updated": "2026-06-23"},
-    "jdc": {"name": "J.D. Power 2026 U.S. Auto Claims Satisfaction Study (national), as reported by CarPro", "url": "https://www.carpro.com/blog/jd-power-2026-auto-insurance-claim-satisfaction", "updated": "2026-11-12"},
-    "tdi": {"name": "Texas Department of Insurance, Auto insurance guide", "url": "https://www.tdi.texas.gov/pubs/consumer/cb020.html"},
-    "dd": {"name": "DoorDash Dasher insurance basics", "url": "https://dasher.doordash.com/en-us/support/insurance"},
-    "mgd": {"name": "MoneyGeek, Best car insurance for delivery drivers (2026)", "url": "https://www.moneygeek.com/insurance/auto/best-car-insurance-for-delivery-drivers/"},
-    "im": {"name": "InsureMojo, Car insurance for delivery drivers", "url": "https://www.insuremojo.com/car-insurance-delivery-drivers/"},
-    "fa": {"name": "Forbes Advisor, Best car insurance in Texas", "url": "https://www.forbes.com/advisor/car-insurance/best-car-insurance-texas/"}
+    "mg": {
+      "name": "MoneyGeek",
+      "title": "Cheapest Car Insurance in Texas",
+      "url": "https://www.moneygeek.com/insurance/auto/cheapest-car-insurance-texas/",
+      "updated": "2026-11-06"
+    },
+    "nw": {
+      "name": "NerdWallet",
+      "title": "The Cheapest Car Insurance in Texas for November 2026",
+      "url": "https://www.nerdwallet.com/insurance/auto/cheap-car-insurance-texas",
+      "updated": "2026-11-02"
+    },
+    "icom": {
+      "name": "Insurance.com",
+      "title": "Best cheap car insurance in Texas",
+      "url": "https://www.insurance.com/auto-insurance/cheapest-car-insurance-in-texas",
+      "updated": "2026-01-06"
+    },
+    "jdp": {
+      "name": "J.D. Power 2026 U.S. Auto Insurance Study (Texas region), as reported by Insurance.com",
+      "url": "https://www.insurance.com/auto-insurance/jd-powers-best-and-worst-car-insurance-companies-for-customer-satisfaction/",
+      "updated": "2026-06-23"
+    },
+    "jdc": {
+      "name": "J.D. Power 2026 U.S. Auto Claims Satisfaction Study (national), as reported by CarPro",
+      "url": "https://www.carpro.com/blog/jd-power-2026-auto-insurance-claim-satisfaction",
+      "updated": "2026-11-12"
+    },
+    "tdi": {
+      "name": "Texas Department of Insurance, Auto insurance guide",
+      "url": "https://www.tdi.texas.gov/pubs/consumer/cb020.html"
+    },
+    "dd": {
+      "name": "DoorDash Dasher insurance basics",
+      "url": "https://dasher.doordash.com/en-us/support/insurance"
+    },
+    "mgd": {
+      "name": "MoneyGeek, Best car insurance for delivery drivers (2026)",
+      "url": "https://www.moneygeek.com/insurance/auto/best-car-insurance-for-delivery-drivers/"
+    },
+    "im": {
+      "name": "InsureMojo, Car insurance for delivery drivers",
+      "url": "https://www.insuremojo.com/car-insurance-delivery-drivers/"
+    },
+    "fa": {
+      "name": "Forbes Advisor, Best car insurance in Texas",
+      "url": "https://www.forbes.com/advisor/car-insurance/best-car-insurance-texas/"
+    },
+    "ftx": {
+      "name": "Farmers, Texas car insurance",
+      "title": "Texas Car Insurance Coverage",
+      "url": "https://www.farmers.com/texas/car-insurance/"
+    },
+    "fdisc": {
+      "name": "Farmers, car insurance discounts",
+      "title": "Car Insurance Discounts",
+      "url": "https://www.farmers.com/discounts/car-insurance/"
+    },
+    "fflex": {
+      "name": "Farmers, Flex Personal Auto options",
+      "title": "Farmers Flex Personal Auto Options",
+      "url": "https://www.farmers.com/auto/coverage/flex/"
+    },
+    "fcontact": {
+      "name": "Farmers, Contact us",
+      "title": "Contact Us",
+      "url": "https://www.farmers.com/contact-us/"
+    },
+    "fclaims": {
+      "name": "Farmers, claims",
+      "title": "File or track a Farmers Insurance claim",
+      "url": "https://www.farmers.com/claims/"
+    },
+    "fsig": {
+      "name": "Farmers, Signal app",
+      "title": "Farmers Signal with CrashAssist",
+      "url": "https://www.farmers.com/signal/"
+    },
+    "fride": {
+      "name": "Farmers, Rideshare insurance",
+      "title": "Rideshare Insurance",
+      "url": "https://www.farmers.com/rideshare/"
+    },
+    "fco": {
+      "name": "Farmers, Our companies",
+      "title": "Our Companies",
+      "url": "https://www.farmers.com/companies/"
+    },
+    "fauto": {
+      "name": "Farmers, car insurance",
+      "title": "Car insurance",
+      "url": "https://www.farmers.com/auto/"
+    }
   },
   "datasets": [
-    {"id": "mg65", "src": "mg", "label": "MoneyGeek · 65-year-old driver (closest to your age)", "short": "MoneyGeek, age 65", "profile": "65-year-old, clean record, good credit. Full coverage = 100/300/100 liability with $1,000 deductible. Minimum = Texas 30/60/25.", "period": "month", "avgFull": 161, "avgMin": 74},
-    {"id": "mg40", "src": "mg", "label": "MoneyGeek · 40-year-old driver (10 insurers)", "short": "MoneyGeek, age 40", "profile": "40-year-old man, clean record, good credit. Full coverage = 100/300/100 liability with $1,000 deductible. Minimum = Texas 30/60/25.", "period": "month", "avgFull": 165, "avgMin": 73},
-    {"id": "nw70", "src": "nw", "label": "NerdWallet · 70-year-old driver", "short": "NerdWallet, age 70", "profile": "70-year-old, good credit, no violations. NerdWallet shows its five cheapest companies for each coverage level. Median rates.", "period": "month", "avgFull": null, "avgMin": null},
-    {"id": "nw35", "src": "nw", "label": "NerdWallet · 35-year-old driver", "short": "NerdWallet, age 35", "profile": "35-year-old, good credit, clean record. Full coverage = 100/300/50 liability, $1,000 deductibles. Five cheapest companies shown. Median rates.", "period": "month", "avgFull": 303, "avgMin": 90},
-    {"id": "icom", "src": "icom", "label": "Insurance.com · sample Texas driver (annual)", "short": "Insurance.com", "profile": "Full coverage = 100/300/100 liability with $500 deductible. Minimum = state minimum liability. Annual rates.", "period": "year", "avgFull": 2631, "avgMin": null}
+    {
+      "id": "mg65",
+      "src": "mg",
+      "label": "MoneyGeek · 65-year-old driver (closest to your age)",
+      "short": "MoneyGeek, age 65",
+      "profile": "65-year-old, clean record, good credit. Full coverage = 100/300/100 liability with $1,000 deductible. Minimum = Texas 30/60/25.",
+      "period": "month",
+      "avgFull": 161,
+      "avgMin": 74
+    },
+    {
+      "id": "mg40",
+      "src": "mg",
+      "label": "MoneyGeek · 40-year-old driver (10 insurers)",
+      "short": "MoneyGeek, age 40",
+      "profile": "40-year-old man, clean record, good credit. Full coverage = 100/300/100 liability with $1,000 deductible. Minimum = Texas 30/60/25.",
+      "period": "month",
+      "avgFull": 165,
+      "avgMin": 73
+    },
+    {
+      "id": "nw70",
+      "src": "nw",
+      "label": "NerdWallet · 70-year-old driver",
+      "short": "NerdWallet, age 70",
+      "profile": "70-year-old, good credit, no violations. NerdWallet shows its five cheapest companies for each coverage level. Median rates.",
+      "period": "month",
+      "avgFull": null,
+      "avgMin": null
+    },
+    {
+      "id": "nw35",
+      "src": "nw",
+      "label": "NerdWallet · 35-year-old driver",
+      "short": "NerdWallet, age 35",
+      "profile": "35-year-old, good credit, clean record. Full coverage = 100/300/50 liability, $1,000 deductibles. Five cheapest companies shown. Median rates.",
+      "period": "month",
+      "avgFull": 303,
+      "avgMin": 90
+    },
+    {
+      "id": "icom",
+      "src": "icom",
+      "label": "Insurance.com · sample Texas driver (annual)",
+      "short": "Insurance.com",
+      "profile": "Full coverage = 100/300/100 liability with $500 deductible. Minimum = state minimum liability. Annual rates.",
+      "period": "year",
+      "avgFull": 2631,
+      "avgMin": null
+    }
   ],
   "near": [
-    {"text": "Frisco: State Farm has the cheapest average minimum-coverage rate, $48 a month.", "src": "mg"},
-    {"text": "Dallas: Auto Club (AAA) has the cheapest median full-coverage rate for a clean record, $1,764 a year; minimum coverage $637 a year.", "src": "nw"},
-    {"text": "Frisco-specific full-coverage averages by company were not published by these sources. Use HelpInsure.com (Texas Department of Insurance) with ZIP 75034 for local sample rates.", "src": "tdi"}
+    {
+      "text": "Frisco: State Farm has the cheapest average minimum-coverage rate, $48 a month.",
+      "src": "mg"
+    },
+    {
+      "text": "Dallas: Auto Club (AAA) has the cheapest median full-coverage rate for a clean record, $1,764 a year; minimum coverage $637 a year.",
+      "src": "nw"
+    },
+    {
+      "text": "Frisco-specific full-coverage averages by company were not published by these sources. Use HelpInsure.com (Texas Department of Insurance) with ZIP 75034 for local sample rates.",
+      "src": "tdi"
+    }
   ],
   "jdpTexasAvg": 648,
   "jdcAvg": 700,
   "insurers": [
-    {"id": "statefarm", "name": "State Farm", "color": "#d62311", "site": "https://www.statefarm.com/", "quote": "https://www.statefarm.com/insurance/auto", "phone": null, "openTo": "Everyone",
-     "rates": {"mg65": {"full": 102, "min": 45}, "mg40": {"full": 102, "min": 45}, "nw70": {"full": 143, "min": 45}, "nw35": {"full": 150, "min": 43}, "icom": {"full": 2264, "min": 494}},
-     "jdp": 662, "jdc": {"rank": 9, "of": 17}, "amBest": "A++", "naic": 0.79,
-     "delivery": {"level": "likely", "text": "DoorDash's own insurance page names \"State Farm's delivery-friendly policy\" as an option. State Farm says a standard State Farm policy may cover deliveries in some situations, and tells drivers to disclose delivery work to an agent.", "srcs": ["dd"], "link": "https://www.statefarm.com/simple-insights/auto-and-vehicles/insurance-for-delivery-drivers"},
-     "telematics": "Drive Safe & Save"},
-    {"id": "geico", "name": "GEICO", "color": "#1f4fa3", "site": "https://www.geico.com/", "quote": "https://www.geico.com/auto-insurance/", "openTo": "Everyone",
-     "rates": {"mg65": {"full": 119, "min": 64}, "mg40": {"full": 111, "min": 54}, "nw70": {"full": 187, "min": 58}, "nw35": {"full": 210, "min": 58}, "icom": {"full": 2746, "min": 616}},
-     "jdp": 646, "jdc": {"rank": 14, "of": 17}, "amBest": "A++", "naic": 0.69,
-     "delivery": {"level": "no", "text": "2026 reviews from MoneyGeek and InsureMojo both say GEICO's rideshare/delivery policy is NOT sold in Texas. Call GEICO to confirm before relying on it for delivery work.", "srcs": ["mgd", "im"]},
-     "telematics": "DriveEasy"},
-    {"id": "progressive", "name": "Progressive", "color": "#0077c8", "site": "https://www.progressive.com/", "quote": "https://www.progressive.com/auto/", "openTo": "Everyone",
-     "rates": {"mg65": null, "mg40": {"full": 153, "min": 90}, "nw70": {"full": 228, "min": null}, "nw35": null, "icom": {"full": 2916, "min": 641}},
-     "jdp": 635, "jdc": {"rank": 16, "of": 17}, "amBest": "A+", "naic": 0.71,
-     "delivery": {"level": "yes", "text": "Progressive says its rideshare add-on covers drivers on delivery apps like DoorDash and Uber Eats \"in most states.\" It doesn't name Texas on that page, so call 1-855-347-3939 to confirm for Texas.", "srcs": [], "link": "https://www.progressive.com/auto/insurance-coverages/rideshare/"},
-     "telematics": "Snapshot"},
-    {"id": "allstate", "name": "Allstate", "color": "#0033a0", "site": "https://www.allstate.com/", "quote": "https://www.allstate.com/auto-insurance", "openTo": "Everyone",
-     "rates": {"mg65": null, "mg40": {"full": 213, "min": 90}, "nw70": {"full": null, "min": 58}, "nw35": {"full": 237, "min": 58}, "icom": {"full": 4258, "min": 975}},
-     "jdp": 638, "jdc": {"rank": 13, "of": 17}, "amBest": "A+", "naic": 1.1,
-     "delivery": {"level": "likely", "text": "Allstate sells a \"Ride for Hire\" add-on and says it's not available in every state. 2026 reviews (MoneyGeek, InsureMojo) list Texas as one of the states that have it. Confirm that it covers food delivery.", "srcs": ["mgd", "im"], "link": "https://www.allstate.com/auto-insurance/ride-for-hire"},
-     "telematics": "Drivewise"},
-    {"id": "usaa", "name": "USAA", "color": "#12385f", "site": "https://www.usaa.com/", "quote": "https://www.usaa.com/inet/wc/auto-insurance", "openTo": "Military members, veterans and their families only",
-     "rates": {"mg65": null, "mg40": null, "nw70": null, "nw35": null, "icom": {"full": 1692, "min": 407}},
-     "rateNote": "NerdWallet (Nov 2026): $1,864 a year full coverage, age 35.",
-     "jdp": 711, "jdpNote": "not officially ranked (members only)", "jdc": null, "amBest": "A++", "naic": 1.18,
-     "delivery": {"level": "likely", "text": "Reviews report a rideshare/business-use add-on for members (InsureMojo says from about $6 a month). Members only.", "srcs": ["im"]},
-     "telematics": "SafePilot"},
-    {"id": "farmers", "name": "Farmers", "color": "#003a70", "site": "https://www.farmers.com/", "quote": "https://www.farmers.com/auto/", "openTo": "Everyone",
-     "rates": {"mg65": null, "mg40": {"full": 225, "min": 75}, "nw70": null, "nw35": null, "icom": {"full": 4260, "min": 893}},
-     "jdp": 632, "jdc": {"rank": 8, "of": 17}, "amBest": "A", "naic": 0.86,
-     "delivery": {"level": "unknown", "text": "InsureMojo reports a business-use rider in most states. Not confirmed for Texas, so ask an agent.", "srcs": ["im"]},
-     "telematics": "Signal"},
-    {"id": "nationwide", "name": "Nationwide", "color": "#1c57a5", "site": "https://www.nationwide.com/", "quote": "https://www.nationwide.com/personal/insurance/auto/", "openTo": "Everyone",
-     "rates": {"mg65": null, "mg40": null, "nw70": null, "nw35": null, "icom": null},
-     "rateNote": "Insurance.com lists an average of $1,502 a year (Jan 2026 score table), but no matching full/minimum split.",
-     "jdp": 667, "jdc": {"rank": 2, "of": 17, "score": 743}, "amBest": "A", "naic": 0.63,
-     "delivery": {"level": "unknown", "text": "InsureMojo says Nationwide sells a rideshare endorsement in select states only. Call to confirm for Texas.", "srcs": ["im"]},
-     "telematics": "SmartRide"},
-    {"id": "txfb", "name": "Texas Farm Bureau", "color": "#0a6b3d", "site": "https://www.txfb-ins.com/", "quote": "https://www.txfb-ins.com/insurance/auto", "openTo": "Texans (Farm Bureau membership required)",
-     "rates": {"mg65": null, "mg40": null, "nw70": null, "nw35": null, "icom": {"full": 1339, "min": 352}},
-     "jdp": 651, "jdc": null, "amBest": "B++", "naic": 0.16,
-     "delivery": {"level": "no", "text": "Forbes Advisor says Texas Farm Bureau doesn't offer rideshare insurance. Ask before using it for delivery work.", "srcs": ["fa"]},
-     "telematics": null},
-    {"id": "aaa", "name": "AAA (Auto Club, Texas)", "color": "#e31837", "site": "https://www.texas.aaa.com/", "quote": "https://www.texas.aaa.com/insurance/auto-insurance", "openTo": "AAA members",
-     "rates": {"mg65": {"full": 134, "min": 67}, "mg40": {"full": 127, "min": 64}, "nw70": {"full": 98, "min": 39}, "nw35": {"full": 112, "min": 37}, "icom": {"full": 2318, "min": 619}},
-     "jdp": 673, "jdc": {"rank": 3, "of": 17, "score": 740}, "amBest": "A+", "naic": 1.16,
-     "delivery": {"level": "unknown", "text": "No verified information on delivery coverage. Ask before buying.", "srcs": []},
-     "telematics": null},
-    {"id": "germania", "name": "Germania", "color": "#7a1f2b", "site": "https://www.germaniainsurance.com/", "quote": "https://www.germaniainsurance.com/auto-insurance", "openTo": "Texans",
-     "rates": {"mg65": {"full": 130, "min": 64}, "mg40": {"full": 144, "min": 73}, "nw70": {"full": 164, "min": 72}, "nw35": {"full": 183, "min": 79}, "icom": null},
-     "jdp": null, "jdc": null, "amBest": null, "naic": null,
-     "delivery": {"level": "unknown", "text": "No verified information on delivery coverage. Ask before buying.", "srcs": []},
-     "telematics": null},
-    {"id": "mercury", "name": "Mercury", "color": "#b3121b", "site": "https://www.mercuryinsurance.com/", "quote": "https://www.mercuryinsurance.com/insurance/auto/", "openTo": "Everyone",
-     "rates": {"mg65": {"full": 142, "min": 67}, "mg40": {"full": 138, "min": 56}, "nw70": null, "nw35": null, "icom": null},
-     "jdp": null, "jdc": null, "amBest": null, "naic": null,
-     "delivery": {"level": "unknown", "text": "No verified information on delivery coverage. Ask before buying.", "srcs": []},
-     "telematics": null},
-    {"id": "travelers", "name": "Travelers", "color": "#c8102e", "site": "https://www.travelers.com/", "quote": "https://www.travelers.com/car-insurance", "openTo": "Everyone",
-     "rates": {"mg65": null, "mg40": null, "nw70": null, "nw35": null, "icom": null},
-     "jdp": null, "jdc": {"rank": 11, "of": 17}, "amBest": null, "naic": null,
-     "delivery": {"level": "unknown", "text": "No verified information on delivery coverage. Ask before buying.", "srcs": []},
-     "telematics": "IntelliDrive"},
-    {"id": "liberty", "name": "Liberty Mutual", "color": "#1a1446", "site": "https://www.libertymutual.com/", "quote": "https://www.libertymutual.com/vehicle/auto-insurance", "openTo": "Everyone",
-     "rates": {"mg65": null, "mg40": null, "nw70": null, "nw35": null, "icom": null},
-     "rateNote": "NerdWallet says Liberty Mutual doesn't make its rate data public.",
-     "jdp": 662, "jdc": {"rank": 10, "of": 17}, "amBest": null, "naic": null,
-     "delivery": {"level": "unknown", "text": "InsureMojo says Liberty Mutual has a rideshare endorsement, but food-delivery coverage varies by state. Ask for Texas.", "srcs": ["im"]},
-     "telematics": "RightTrack"},
-    {"id": "root", "name": "Root", "color": "#ff5a36", "site": "https://www.joinroot.com/", "quote": "https://www.joinroot.com/", "openTo": "Check availability",
-     "rates": {"mg65": null, "mg40": null, "nw70": null, "nw35": null, "icom": null},
-     "jdp": null, "jdc": null, "amBest": null, "naic": null,
-     "delivery": {"level": "unknown", "text": "No verified information on delivery coverage. Ask before buying.", "srcs": []},
-     "telematics": "App-based (prices based on a test drive)"},
-    {"id": "clearcover", "name": "Clearcover", "color": "#0b5cff", "site": "https://clearcover.com/", "quote": "https://clearcover.com/", "openTo": "Check availability",
-     "rates": {"mg65": null, "mg40": null, "nw70": null, "nw35": null, "icom": null},
-     "jdp": null, "jdc": null, "amBest": null, "naic": null,
-     "delivery": {"level": "unknown", "text": "No verified information on delivery coverage. Ask before buying.", "srcs": []},
-     "telematics": null}
+    {
+      "id": "statefarm",
+      "name": "State Farm",
+      "color": "#d62311",
+      "site": "https://www.statefarm.com/",
+      "quote": "https://www.statefarm.com/insurance/auto",
+      "phone": null,
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": {
+          "full": 102,
+          "min": 45
+        },
+        "mg40": {
+          "full": 102,
+          "min": 45
+        },
+        "nw70": {
+          "full": 143,
+          "min": 45
+        },
+        "nw35": {
+          "full": 150,
+          "min": 43
+        },
+        "icom": {
+          "full": 2264,
+          "min": 494
+        }
+      },
+      "jdp": 662,
+      "jdc": {
+        "rank": 9,
+        "of": 17
+      },
+      "amBest": "A++",
+      "naic": 0.79,
+      "delivery": {
+        "level": "likely",
+        "text": "DoorDash's own insurance page names \"State Farm's delivery-friendly policy\" as an option. State Farm says a standard State Farm policy may cover deliveries in some situations, and tells drivers to disclose delivery work to an agent.",
+        "srcs": [
+          "dd"
+        ],
+        "link": "https://www.statefarm.com/simple-insights/auto-and-vehicles/insurance-for-delivery-drivers"
+      },
+      "telematics": "Drive Safe & Save"
+    },
+    {
+      "id": "geico",
+      "name": "GEICO",
+      "color": "#1f4fa3",
+      "site": "https://www.geico.com/",
+      "quote": "https://www.geico.com/auto-insurance/",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": {
+          "full": 119,
+          "min": 64
+        },
+        "mg40": {
+          "full": 111,
+          "min": 54
+        },
+        "nw70": {
+          "full": 187,
+          "min": 58
+        },
+        "nw35": {
+          "full": 210,
+          "min": 58
+        },
+        "icom": {
+          "full": 2746,
+          "min": 616
+        }
+      },
+      "jdp": 646,
+      "jdc": {
+        "rank": 14,
+        "of": 17
+      },
+      "amBest": "A++",
+      "naic": 0.69,
+      "delivery": {
+        "level": "no",
+        "text": "2026 reviews from MoneyGeek and InsureMojo both say GEICO's rideshare/delivery policy is NOT sold in Texas. Call GEICO to confirm before relying on it for delivery work.",
+        "srcs": [
+          "mgd",
+          "im"
+        ]
+      },
+      "telematics": "DriveEasy"
+    },
+    {
+      "id": "progressive",
+      "name": "Progressive",
+      "color": "#0077c8",
+      "site": "https://www.progressive.com/",
+      "quote": "https://www.progressive.com/auto/",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": null,
+        "mg40": {
+          "full": 153,
+          "min": 90
+        },
+        "nw70": {
+          "full": 228,
+          "min": null
+        },
+        "nw35": null,
+        "icom": {
+          "full": 2916,
+          "min": 641
+        }
+      },
+      "jdp": 635,
+      "jdc": {
+        "rank": 16,
+        "of": 17
+      },
+      "amBest": "A+",
+      "naic": 0.71,
+      "delivery": {
+        "level": "yes",
+        "text": "Progressive says its rideshare add-on covers drivers on delivery apps like DoorDash and Uber Eats \"in most states.\" It doesn't name Texas on that page, so call 1-855-347-3939 to confirm for Texas.",
+        "srcs": [],
+        "link": "https://www.progressive.com/auto/insurance-coverages/rideshare/"
+      },
+      "telematics": "Snapshot"
+    },
+    {
+      "id": "allstate",
+      "name": "Allstate",
+      "color": "#0033a0",
+      "site": "https://www.allstate.com/",
+      "quote": "https://www.allstate.com/auto-insurance",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": null,
+        "mg40": {
+          "full": 213,
+          "min": 90
+        },
+        "nw70": {
+          "full": null,
+          "min": 58
+        },
+        "nw35": {
+          "full": 237,
+          "min": 58
+        },
+        "icom": {
+          "full": 4258,
+          "min": 975
+        }
+      },
+      "jdp": 638,
+      "jdc": {
+        "rank": 13,
+        "of": 17
+      },
+      "amBest": "A+",
+      "naic": 1.1,
+      "delivery": {
+        "level": "likely",
+        "text": "Allstate sells a \"Ride for Hire\" add-on and says it's not available in every state. 2026 reviews (MoneyGeek, InsureMojo) list Texas as one of the states that have it. Confirm that it covers food delivery.",
+        "srcs": [
+          "mgd",
+          "im"
+        ],
+        "link": "https://www.allstate.com/auto-insurance/ride-for-hire"
+      },
+      "telematics": "Drivewise"
+    },
+    {
+      "id": "usaa",
+      "name": "USAA",
+      "color": "#12385f",
+      "site": "https://www.usaa.com/",
+      "quote": "https://www.usaa.com/inet/wc/auto-insurance",
+      "openTo": "Military members, veterans and their families only",
+      "rates": {
+        "mg65": null,
+        "mg40": null,
+        "nw70": null,
+        "nw35": null,
+        "icom": {
+          "full": 1692,
+          "min": 407
+        }
+      },
+      "rateNote": "NerdWallet (Nov 2026): $1,864 a year full coverage, age 35.",
+      "jdp": 711,
+      "jdpNote": "not officially ranked (members only)",
+      "jdc": null,
+      "amBest": "A++",
+      "naic": 1.18,
+      "delivery": {
+        "level": "likely",
+        "text": "Reviews report a rideshare/business-use add-on for members (InsureMojo says from about $6 a month). Members only.",
+        "srcs": [
+          "im"
+        ]
+      },
+      "telematics": "SafePilot"
+    },
+    {
+      "id": "farmers",
+      "name": "Farmers",
+      "color": "#003a70",
+      "site": "https://www.farmers.com/",
+      "quote": "https://www.farmers.com/auto/",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": null,
+        "mg40": {
+          "full": 225,
+          "min": 75
+        },
+        "nw70": null,
+        "nw35": null,
+        "icom": {
+          "full": 4260,
+          "min": 893
+        }
+      },
+      "jdp": 632,
+      "jdc": {
+        "rank": 8,
+        "of": 17
+      },
+      "amBest": "A",
+      "naic": 0.86,
+      "delivery": {
+        "level": "likely",
+        "text": "Farmers sells a Farmers Flex Personal Auto policy in Texas. Farmers' Flex coverage page lists optional Ride Share and Food Delivery coverage for driving with an app-based company, whether carrying passengers or delivering food. That same page says not all coverages are available in every state, so ask a Farmers agent to confirm it is sold in Texas and that it covers DoorDash or courier work. Farmers also describes a separate Rideshare add-on for ride-hailing companies like Uber, to fill the gap when you are logged into the app but have not accepted a ride.",
+        "srcs": [
+          "ftx",
+          "fflex",
+          "fride"
+        ],
+        "link": "https://www.farmers.com/auto/coverage/flex/"
+      },
+      "telematics": "Signal",
+      "phone": "888-317-3285",
+      "customerPhone": "888-327-6335",
+      "claims": {
+        "phone": "800-435-7764",
+        "hours": "24 hours a day, 7 days a week",
+        "url": "https://www.farmers.com/claims/",
+        "spanish": "877-732-5266"
+      },
+      "texasNote": "Farmers sells auto insurance in Texas, including the Farmers Flex Personal Auto policy. Texas minimum liability is 30/60/25 as of November 2022.",
+      "rateNote": "MoneyGeek's 65-year-old Texas table and NerdWallet's 70- and 35-year-old tables do not list Farmers, so those prices show as n/a. MoneyGeek's 40-year-old table and Insurance.com do list Farmers.",
+      "discountGroups": [
+        {
+          "label": "Discounts Farmers names for Texas",
+          "src": "ftx",
+          "items": [
+            "Welcome Discount",
+            "Loyalty Discount",
+            "Five-Year Accident-Free Discount",
+            "Bundling a home or renters policy",
+            "Signal app — an initial discount for using the app"
+          ]
+        },
+        {
+          "label": "Other discounts on Farmers' national discounts page (not all are available in every state)",
+          "src": "fdisc",
+          "items": [
+            "Farmers GroupSelect (employees or members of participating employers, alumni groups and other groups)",
+            "Bundle home and auto — Farmers says you can save 10% or more; amounts may vary by state",
+            "Insure more than one car",
+            "ePolicy (paperless documents)",
+            "Good Payer (no late billing fees in the 12 months before renewal processing)",
+            "Youthful Driver (under 25, in some family-policy situations)",
+            "On your own (under 29, after leaving a household Farmers policy)",
+            "Auto Pay / EFT",
+            "Safe driver (no chargeable accidents or citations for the past three years)",
+            "Good student",
+            "Distant student",
+            "Shared family car",
+            "Mature, defensive or senior driver — for drivers over 55 who completed state-approved safe-driver training in the last three years",
+            "Homeowner, even if Farmers does not insure the home",
+            "Pay in full",
+            "Anti-theft devices (qualifying protective devices such as vehicle tracking)"
+          ]
+        }
+      ],
+      "coverageGroups": [
+        {
+          "label": "Coverages Farmers names for Texas",
+          "src": "ftx",
+          "items": [
+            "Liability — Texas requires at least 30/60/25 (as of November 2022)",
+            "Collision and comprehensive (optional, typical on a Texas policy)",
+            "Rental or Rental Alternative coverage",
+            "Vehicle Replacement Plus (if a newer car is totaled)",
+            "Enhanced Roadside and Ride Assistance"
+          ]
+        },
+        {
+          "label": "Other options on Farmers' Flex Personal Auto page (not all are available in every state)",
+          "src": "fflex",
+          "items": [
+            "Accident Forgiveness",
+            "Declining Deductible",
+            "New Original Parts",
+            "$100 Glass Deductible, with no deductible for chip repairs that do not need replacement",
+            "Safety Equipment — waiver of deductible, in select states only",
+            "Customized equipment over $1,000",
+            "Ride Share and Food Delivery — coverage while driving for an app-based company, whether carrying passengers or delivering food. Ask an agent to confirm this is sold in Texas and that it covers your delivery work."
+          ]
+        }
+      ],
+      "affiliatesNote": "Bristol West and Foremost are part of the Farmers Insurance Group of Companies, according to Farmers' own companies page. Foremost became a member in 2000 and Bristol West in 2007. Bristol West sells non-standard private-passenger auto insurance. Foremost sells auto, home and specialty policies such as mobile homes, motorcycles and boats.",
+      "affiliatesSrc": "fco",
+      "telematicsNote": "Farmers' Texas page lists the Signal app. Farmers says Signal and the Signal discount are not available in Florida, Hawaii and New York, and the Signal discount is not available in California. Texas is not on that exclusion list. You can get an initial discount for enrolling; safer driving may lower the renewal price, and riskier driving can raise it. Optional CrashAssist can try to detect a crash and send help. To enroll, Farmers says to talk to an agent or call 800-709-7821.",
+      "telematicsSrc": "fsig"
+    },
+    {
+      "id": "nationwide",
+      "name": "Nationwide",
+      "color": "#1c57a5",
+      "site": "https://www.nationwide.com/",
+      "quote": "https://www.nationwide.com/personal/insurance/auto/",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": null,
+        "mg40": null,
+        "nw70": null,
+        "nw35": null,
+        "icom": null
+      },
+      "rateNote": "Insurance.com lists an average of $1,502 a year (Jan 2026 score table), but no matching full/minimum split.",
+      "jdp": 667,
+      "jdc": {
+        "rank": 2,
+        "of": 17,
+        "score": 743
+      },
+      "amBest": "A",
+      "naic": 0.63,
+      "delivery": {
+        "level": "unknown",
+        "text": "InsureMojo says Nationwide sells a rideshare endorsement in select states only. Call to confirm for Texas.",
+        "srcs": [
+          "im"
+        ]
+      },
+      "telematics": "SmartRide"
+    },
+    {
+      "id": "txfb",
+      "name": "Texas Farm Bureau",
+      "color": "#0a6b3d",
+      "site": "https://www.txfb-ins.com/",
+      "quote": "https://www.txfb-ins.com/insurance/auto",
+      "openTo": "Texans (Farm Bureau membership required)",
+      "rates": {
+        "mg65": null,
+        "mg40": null,
+        "nw70": null,
+        "nw35": null,
+        "icom": {
+          "full": 1339,
+          "min": 352
+        }
+      },
+      "jdp": 651,
+      "jdc": null,
+      "amBest": "B++",
+      "naic": 0.16,
+      "delivery": {
+        "level": "no",
+        "text": "Forbes Advisor says Texas Farm Bureau doesn't offer rideshare insurance. Ask before using it for delivery work.",
+        "srcs": [
+          "fa"
+        ]
+      },
+      "telematics": null
+    },
+    {
+      "id": "aaa",
+      "name": "AAA (Auto Club, Texas)",
+      "color": "#e31837",
+      "site": "https://www.texas.aaa.com/",
+      "quote": "https://www.texas.aaa.com/insurance/auto-insurance",
+      "openTo": "AAA members",
+      "rates": {
+        "mg65": {
+          "full": 134,
+          "min": 67
+        },
+        "mg40": {
+          "full": 127,
+          "min": 64
+        },
+        "nw70": {
+          "full": 98,
+          "min": 39
+        },
+        "nw35": {
+          "full": 112,
+          "min": 37
+        },
+        "icom": {
+          "full": 2318,
+          "min": 619
+        }
+      },
+      "jdp": 673,
+      "jdc": {
+        "rank": 3,
+        "of": 17,
+        "score": 740
+      },
+      "amBest": "A+",
+      "naic": 1.16,
+      "delivery": {
+        "level": "unknown",
+        "text": "No verified information on delivery coverage. Ask before buying.",
+        "srcs": []
+      },
+      "telematics": null
+    },
+    {
+      "id": "germania",
+      "name": "Germania",
+      "color": "#7a1f2b",
+      "site": "https://www.germaniainsurance.com/",
+      "quote": "https://www.germaniainsurance.com/auto-insurance",
+      "openTo": "Texans",
+      "rates": {
+        "mg65": {
+          "full": 130,
+          "min": 64
+        },
+        "mg40": {
+          "full": 144,
+          "min": 73
+        },
+        "nw70": {
+          "full": 164,
+          "min": 72
+        },
+        "nw35": {
+          "full": 183,
+          "min": 79
+        },
+        "icom": null
+      },
+      "jdp": null,
+      "jdc": null,
+      "amBest": null,
+      "naic": null,
+      "delivery": {
+        "level": "unknown",
+        "text": "No verified information on delivery coverage. Ask before buying.",
+        "srcs": []
+      },
+      "telematics": null
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "color": "#b3121b",
+      "site": "https://www.mercuryinsurance.com/",
+      "quote": "https://www.mercuryinsurance.com/insurance/auto/",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": {
+          "full": 142,
+          "min": 67
+        },
+        "mg40": {
+          "full": 138,
+          "min": 56
+        },
+        "nw70": null,
+        "nw35": null,
+        "icom": null
+      },
+      "jdp": null,
+      "jdc": null,
+      "amBest": null,
+      "naic": null,
+      "delivery": {
+        "level": "unknown",
+        "text": "No verified information on delivery coverage. Ask before buying.",
+        "srcs": []
+      },
+      "telematics": null
+    },
+    {
+      "id": "travelers",
+      "name": "Travelers",
+      "color": "#c8102e",
+      "site": "https://www.travelers.com/",
+      "quote": "https://www.travelers.com/car-insurance",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": null,
+        "mg40": null,
+        "nw70": null,
+        "nw35": null,
+        "icom": null
+      },
+      "jdp": null,
+      "jdc": {
+        "rank": 11,
+        "of": 17
+      },
+      "amBest": null,
+      "naic": null,
+      "delivery": {
+        "level": "unknown",
+        "text": "No verified information on delivery coverage. Ask before buying.",
+        "srcs": []
+      },
+      "telematics": "IntelliDrive"
+    },
+    {
+      "id": "liberty",
+      "name": "Liberty Mutual",
+      "color": "#1a1446",
+      "site": "https://www.libertymutual.com/",
+      "quote": "https://www.libertymutual.com/vehicle/auto-insurance",
+      "openTo": "Everyone",
+      "rates": {
+        "mg65": null,
+        "mg40": null,
+        "nw70": null,
+        "nw35": null,
+        "icom": null
+      },
+      "rateNote": "NerdWallet says Liberty Mutual doesn't make its rate data public.",
+      "jdp": 662,
+      "jdc": {
+        "rank": 10,
+        "of": 17
+      },
+      "amBest": null,
+      "naic": null,
+      "delivery": {
+        "level": "unknown",
+        "text": "InsureMojo says Liberty Mutual has a rideshare endorsement, but food-delivery coverage varies by state. Ask for Texas.",
+        "srcs": [
+          "im"
+        ]
+      },
+      "telematics": "RightTrack"
+    },
+    {
+      "id": "root",
+      "name": "Root",
+      "color": "#ff5a36",
+      "site": "https://www.joinroot.com/",
+      "quote": "https://www.joinroot.com/",
+      "openTo": "Check availability",
+      "rates": {
+        "mg65": null,
+        "mg40": null,
+        "nw70": null,
+        "nw35": null,
+        "icom": null
+      },
+      "jdp": null,
+      "jdc": null,
+      "amBest": null,
+      "naic": null,
+      "delivery": {
+        "level": "unknown",
+        "text": "No verified information on delivery coverage. Ask before buying.",
+        "srcs": []
+      },
+      "telematics": "App-based (prices based on a test drive)"
+    },
+    {
+      "id": "clearcover",
+      "name": "Clearcover",
+      "color": "#0b5cff",
+      "site": "https://clearcover.com/",
+      "quote": "https://clearcover.com/",
+      "openTo": "Check availability",
+      "rates": {
+        "mg65": null,
+        "mg40": null,
+        "nw70": null,
+        "nw35": null,
+        "icom": null
+      },
+      "jdp": null,
+      "jdc": null,
+      "amBest": null,
+      "naic": null,
+      "delivery": {
+        "level": "unknown",
+        "text": "No verified information on delivery coverage. Ask before buying.",
+        "srcs": []
+      },
+      "telematics": null
+    }
   ]
 }
