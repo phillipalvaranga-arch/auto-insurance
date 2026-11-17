@@ -1,9 +1,9 @@
 {
- "checked": "2026-11-16T21:57:18Z",
+ "checked": "2026-11-17T20:50:04Z",
  "sites": {
   "statefarm": {
-   "code": 200,
-   "state": "up"
+   "code": 401,
+   "state": "blocked"
   },
   "geico": {
    "code": 200,
@@ -38,7 +38,7 @@
    "state": "up"
   },
   "germania": {
-   "code": 202,
+   "code": 200,
    "state": "up"
   },
   "mercury": {
