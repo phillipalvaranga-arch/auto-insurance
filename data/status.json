@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-21T19:08:51Z",
+ "checked": "2026-11-22T19:31:33Z",
  "sites": {
   "statefarm": {
    "code": 401,
@@ -38,7 +38,7 @@
    "state": "up"
   },
   "germania": {
-   "code": 200,
+   "code": 202,
    "state": "up"
   },
   "mercury": {
