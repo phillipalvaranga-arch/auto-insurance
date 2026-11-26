@@ -1,9 +1,9 @@
 {
- "checked": "2026-11-25T21:37:41Z",
+ "checked": "2026-11-26T21:26:16Z",
  "sites": {
   "statefarm": {
-   "code": 401,
-   "state": "blocked"
+   "code": 200,
+   "state": "up"
   },
   "geico": {
    "code": 200,
